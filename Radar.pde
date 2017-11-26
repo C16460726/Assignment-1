@@ -25,6 +25,7 @@ class Radar
     mouse.normalize();
     
     mouse.mult(rd/2);
+    
     pushMatrix();
       translate(rx, ry);
       line(0, 0, mouse.x, mouse.y);
