@@ -16,12 +16,4 @@ void draw()
     {
       r1.RadarUse();
     }
-    
-    background(0);
-  r1.display();
-  
-  if (dist(rx, ry, mouseX, mouseY) <= rd/2 && mousePressed == true)
-    {
-      r1.RadarUse();
-    }
 }

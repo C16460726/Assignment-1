@@ -18,6 +18,16 @@ class Radar
   
   void RadarUse()
   {
-      line(rx, ry, mouseX, mouseY);
+    PVector mouse = new PVector(mouseX, mouseY);
+    PVector radcenter = new PVector(rx, ry);
+    mouse.sub(radcenter);
+    
+    mouse.normalize();
+    
+    mouse.mult(rd/2);
+    pushMatrix();
+      translate(rx, ry);
+      line(0, 0, mouse.x, mouse.y);
+     popMatrix();
   }
 }
