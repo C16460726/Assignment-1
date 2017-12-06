@@ -20,15 +20,24 @@ class Radar
   {
     PVector mouse = new PVector(mouseX, mouseY);
     PVector radcenter = new PVector(rx, ry);
+    PVector velocity = new PVector(2, 2);
+   // PVector acceleration = new PVector(0, 0);
+
     mouse.sub(radcenter);
-    
     mouse.normalize();
-    
     mouse.mult(rd/2);
     
     pushMatrix();
-      translate(rx, ry);
-      line(0, 0, mouse.x, mouse.y);
+    
+     translate(rx, ry);
+     float c = 1;
+     while (c > 0)
+     {
+       line(0, 0, mouse.x - c, mouse.y - c);
+       delay(1000);
+       c = c - 0.1;
+       println(c);
+     }
      popMatrix();
   }
 }
