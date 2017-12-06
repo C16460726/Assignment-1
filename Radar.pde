@@ -11,9 +11,7 @@ class Radar
   
   void display(int col)
   {
-    fill(0,20);
     noStroke();
-    rect(0, 0, rd, rd);
     strokeWeight(1);
     stroke(0, col, 0);
     line(rd/2, 0, rd/2, rd);

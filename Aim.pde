@@ -4,7 +4,6 @@ class Aim
 {
   Aim()
   {
-     background(0);
     noFill();
   }
   
