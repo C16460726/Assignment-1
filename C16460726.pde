@@ -1,12 +1,12 @@
 Radar r1;
-//Aim a;
+Aim a;
 float var;
 
 void setup()
 {
   size(900, 800);
   r1 = new Radar();
-  //a = new Aim();
+  a = new Aim();
 }
 
 void draw()
@@ -19,8 +19,8 @@ void draw()
       r1.RadarUse();
     }
     
-    /*if (dist(rx, ry, mouseX, mouseY) >= rd/2 && mousePressed == true)
+    if (dist(rx, ry, mouseX, mouseY) >= rd/2 && mousePressed == true)
     {
        a.UseAim(50 * abs(cos(var)) + 17, 50 * abs(sin(var)) + 55, 20);
-    }*/
+    }
 }
