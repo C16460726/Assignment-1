@@ -9,12 +9,12 @@ class Aim
   
   void UseAim(float R, float r, float n)
   {
-    PVector mouse = new PVector(mouseX, mouseY);
+    
     strokeWeight(5);
     stroke(255);
     
     pushMatrix();
-    translate(mouse.x, mouse.y);
+    translate(mouseX, mouseY);
     
     for (int i = 0; i <= n; i= i+1) 
     {
