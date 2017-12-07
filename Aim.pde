@@ -12,7 +12,7 @@ class Aim
   {
     //To use the aiming reticle
     PVector mouse = new PVector(mouseX, mouseY);
-    strokeWeight(5);
+    strokeWeight(2);
     stroke(255);
     
     pushMatrix();
