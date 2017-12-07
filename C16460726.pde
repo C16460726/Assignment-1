@@ -7,8 +7,7 @@ void setup()
   size(900, 800);
   r1 = new Radar();
   a = new Aim();
-  
-}
+}//End setup()
 
 void draw()
 {
@@ -19,5 +18,5 @@ void draw()
     {
       r1.display(255);
        a.UseAim(50 * abs(cos(var)) + 17, 50 * abs(sin(var)) + 55, 20);
-    }
-}
+    }//End if
+}//End draw()
