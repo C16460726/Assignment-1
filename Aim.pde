@@ -2,6 +2,7 @@ float[] t = new float[1000];
 
 class Aim
 {
+  //Constructor for the aiming reticle
   Aim()
   {
     noFill();
