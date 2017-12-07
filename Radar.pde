@@ -1,4 +1,5 @@
 float rx, ry, rd;
+float angle;
 
 class Radar
 {  
@@ -11,11 +12,13 @@ class Radar
   
   void display(int col)
   {
+    angle += 0.01;
     noStroke();
     strokeWeight(1);
     stroke(0, col, 0);
     line(rd/2, 0, rd/2, rd);
     line(0, rd/2, rd, rd/2);
+    line(rx, ry, 250 + cos(angle) * 200, 250 + sin(angle) * 200);
     
     //Create four circles for the radar in increasing size, the outer circle has a bigger strokeWeight.
     for (rd = 0; rd <= 125; rd = rd + 31.25)
