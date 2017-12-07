@@ -8,6 +8,7 @@ class Radar
   {
       noFill();
       rd = 125;   //diameter of the radar
+      rx = ry = rd/2;
   }
   
   void display(int col)
@@ -27,10 +28,14 @@ class Radar
       if (rd == 125)
       {
         strokeWeight(3);
-      }
+      }//End if
       
-      ellipse(radcenter.x, radcenter.y, rd, rd);
-     }
+      //Translate it to move the origin to the center of the radar
+      /*pushMatrix();
+        translate(radcenter.x, radcenter.y);
+        */ellipse(radcenter.x, radcenter.y, rd, rd);
+      //popMatrix(); //Reinitialize the origin to (0, 0)
+     }//End for
      
      //Set rd back to 125
      rd = 125;
@@ -49,4 +54,4 @@ class Radar
         angle = angle + 0.02;
       }//End else
   }//End display()
-}//End class
+}//End Radar class
