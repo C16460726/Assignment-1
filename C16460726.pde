@@ -15,11 +15,6 @@ void draw()
    background(0);
     r1.display(255);
     
-    if (dist(rx, ry, mouseX, mouseY) <= rd/2 && mousePressed == true)
-    {
-      r1.RadarUse();
-    }
-    
     if (dist(rx, ry, mouseX, mouseY) >= rd/2 && mousePressed == true)
     {
       r1.display(255);
