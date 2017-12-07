@@ -12,6 +12,7 @@ class Radar
   
   void display(int col)
   {
+    PVector radcenter = new PVector(rx, ry);
     noStroke();
     strokeWeight(1);
     stroke(0, col, 0);
@@ -33,7 +34,7 @@ class Radar
      //Set rd back to 125
      rd = 125;
      
-     line (rx, ry, 45+135*cos((PI/2)+angle), 25+135*sin((PI/2)+angle));
+     line(radcenter.x, radcenter.y, 35+135*cos((PI/2)+angle), 35+135*sin((PI/2)+angle));
       
       if (angle>=PI) 
       {
