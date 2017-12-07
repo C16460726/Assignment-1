@@ -34,31 +34,18 @@ class Radar
      //Set rd back to 125
      rd = 125;
      
+     //Draw the line that rotates around the fixed point (radcenter)
      line(radcenter.x, radcenter.y, rd/2 + rd/2 * cos((PI/2)+angle), rd/2 + rd/2 * sin((PI/2)+angle));
      
-      if (angle>=PI) 
+     //Make it continue around the fixed point by resetting the angle value
+      if (angle >= PI) 
       {
-        angle=-PI;
-      }
+        angle = -PI;
+      }//End if
       
       else
       {
-        angle=angle+0.02;
-      }
-  }
-  
-  void RadarUse()
-  {
-    PVector mouse = new PVector(mouseX, mouseY);
-    PVector radcenter = new PVector(rx, ry);
-
-    mouse.sub(radcenter);
-    mouse.normalize();    //Set the line to a value of 1 
-    mouse.mult(rd/2);     //Scale it out so that the line reaches the full radius of the radar
-    
-    pushMatrix();
-     translate(rx, ry);
-     line(0, 0, mouse.x, mouse.y);
-    popMatrix();
+        angle = angle + 0.02;
+      }//End else
   }
 }
