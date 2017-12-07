@@ -34,8 +34,8 @@ class Radar
      //Set rd back to 125
      rd = 125;
      
-     line(radcenter.x, radcenter.y, 35+135*cos((PI/2)+angle), 35+135*sin((PI/2)+angle));
-      
+     line(radcenter.x, radcenter.y, rd/2 + 135 * cos((PI/2)+angle), rd/2 + 135 * sin((PI/2)+angle));
+     
       if (angle>=PI) 
       {
         angle=-PI;
