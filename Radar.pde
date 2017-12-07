@@ -8,7 +8,7 @@ class Radar
   {
       noFill();
       rd = 125;   //diameter of the radar
-      rx = ry = rd/2;
+      rx = ry = rd/2; //Initialise the center of the radar
   }
   
   void display(int col)
@@ -24,17 +24,13 @@ class Radar
     //Create four circles for the radar in increasing size, the outer circle has a bigger strokeWeight.
     for (rd = 0; rd <= 125; rd = rd + 31.25)
     {
-      //If it's the final circle, increase it's strokeWeight value to make it thicker than the other lines
-      if (rd == 125)
-      {
-        strokeWeight(3);
-      }//End if
-      
-      //Translate it to move the origin to the center of the radar
-      /*pushMatrix();
-        translate(radcenter.x, radcenter.y);
-        */ellipse(radcenter.x, radcenter.y, rd, rd);
-      //popMatrix(); //Reinitialize the origin to (0, 0)
+        //If it's the final circle, increase it's strokeWeight value to make it thicker than the other lines
+        if (rd == 125)
+        {
+          strokeWeight(3);
+        }//End if
+  
+        ellipse(radcenter.x, radcenter.y, rd, rd);
      }//End for
      
      //Set rd back to 125
