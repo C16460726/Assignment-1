@@ -25,5 +25,5 @@ void draw()
      a.UseAim(50 * abs(cos(var)) + 17, 50 * abs(sin(var)) + 55, 20);
   }//End if
   
-  b.displayB(width/2, height/2, 80);
+  b.displayB(width/2, height/2, 130);
 }//End draw()
