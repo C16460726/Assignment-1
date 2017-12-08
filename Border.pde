@@ -11,15 +11,17 @@ class Border
     beginShape();
       stroke(25);
       strokeWeight(8);
-      for(int i = 0; i < 6; i++)
+      for(int i = 0; i < 8; i++)
       {
-        angleB = i * 2 * PI / 6;
+        angleB = i * 2 * PI / 8;
         vertex(x + s * cos(angleB), y + s * sin(angleB));
       }//End for
     endShape(CLOSE);  //Include a CLOSE to complete the hexagon
     
+    line(rd, 0, x - s/1.4, y - 100);
     line(0, height/2, x - s, y);
+    
+    
     line(width, height/2, x + s, y);
-    line(rd, 0, x - s/2, y - s + 15);
   }//End displayB()
 }//End class Border
