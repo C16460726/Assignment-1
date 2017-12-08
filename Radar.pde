@@ -8,7 +8,8 @@ class Radar
   {
       noFill();
       rd = 125;   //diameter of the radar
-      rx = rd * 2.8; //Initialise the center of the radar
+      //Initialise the center of the radar
+      rx = rd * 2.8;
       ry = height - (rd * 1.5);
   }
   
@@ -19,6 +20,7 @@ class Radar
     
     strokeWeight(1);
     stroke(0, col, 0);
+    //Create the cross hairs
     line(rx, height - (rd * 2), rx, height - rd);
     line(rd * 3.3, ry, rd * 2.3,  ry);
     
@@ -38,7 +40,7 @@ class Radar
      rd = 125;
      
      //Draw the line that rotates around the fixed point (radcenter)
-     line(radcenter.x, radcenter.y, rd/2 + rd/2 * cos((PI/2)+angle), rd/2 + rd/2 * sin((PI/2)+angle));
+     line(radcenter.x, radcenter.y, rx + rd/2 * cos((PI/2)+angle), ry + rd/2 * sin((PI/2)+angle));
      
      //Make it continue around the fixed point by resetting the angle value
       if (angle >= PI) 
