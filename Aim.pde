@@ -47,10 +47,11 @@ class Aim
     stroke(44, 157, 232);
     //Draw the lines to give the targeting system a more authentic feel
    
-    line(rectx, recty, rectx + syswidth/8, recty + sysheight/4);
-   
+    line(rectx + 5, recty, rectx + syswidth/8, recty + sysheight/4);
+    //line(
     //translate(rectx + (syswidth/2), recty + (sysheight/4)); 
 
+    strokeWeight(5);
     stroke(0, 0, 51);
     rect(rectx, recty, syswidth, sysheight, rounded);
     
