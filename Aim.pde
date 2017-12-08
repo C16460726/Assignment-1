@@ -44,13 +44,15 @@ class Aim
   void displaySys(float rectx, float recty, float rounded)
   {
     strokeWeight(2);
+    stroke(44, 157, 232);
+    //Draw the lines to give the targeting system a more authentic feel
+   
+    line(rectx, recty, rectx + syswidth/8, recty + sysheight/4);
+   
+    //translate(rectx + (syswidth/2), recty + (sysheight/4)); 
+
     stroke(0, 0, 51);
     rect(rectx, recty, syswidth, sysheight, rounded);
     
-    //Draw the lines to give the targeting system a more authentic feel
-    for ()
-    {
-      
-    }//End for
   }//End displaySys()
 }//End class

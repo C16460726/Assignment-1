@@ -22,6 +22,9 @@ void draw()
   //display the window frame of the TIE fighter in the center of the screen 
   b.displayB(width/2, height/2, 135);
   
+  //Display the targeting system
+  target.displaySys(475, 570, 8);
+  
   //Only display the aiming reticle if the mouse is not hovering over the radar
   if (dist(rx, ry, mouseX, mouseY) >= rd/2 && mousePressed == true)
   {
@@ -29,5 +32,4 @@ void draw()
      r1.display(255);
      a.UseAim(50 * abs(cos(var)) + 17, 50 * abs(sin(var)) + 55, 20);
   }//End if
-  target.displaySys(475, 570, 8);
 }//End draw()
