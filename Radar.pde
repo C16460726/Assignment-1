@@ -8,8 +8,8 @@ class Radar
   {
       noFill();
       rd = 125;   //diameter of the radar
-      rx = rd/2; //Initialise the center of the radar
-      ry = rd/2;
+      rx = rd * 2.8; //Initialise the center of the radar
+      ry = height - (rd * 1.5);
   }
   
   void display(int col)
@@ -19,8 +19,8 @@ class Radar
     
     strokeWeight(1);
     stroke(0, col, 0);
-    line(rd/2, 0, rd/2, rd);
-    line(0, rd/2, rd, rd/2);
+    line(rx, height - (rd * 2), rx, height - rd);
+    line(rd * 3.3, ry, rd * 2.3,  ry);
     
     //Create four circles for the radar in increasing size, the outer circle has a bigger strokeWeight.
     for (rd = 0; rd <= 125; rd = rd + 31.25)
