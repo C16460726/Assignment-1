@@ -1,4 +1,5 @@
 float[] t = new float[1000];
+float syswidth, sysheight;
 
 class Aim
 {
@@ -6,6 +7,8 @@ class Aim
   Aim()
   {
     noFill();
+    syswidth = 145;
+    sysheight = 85;
   }
   
   void UseAim(float R, float r, float n)
@@ -35,6 +38,13 @@ class Aim
       }//End else
     }//End for
     popMatrix();  //Reset the origin to (0, 0)
-    var += PI/100;  //Set the speedof the aiming reticle
+    var += PI/100;  //Set the speed of the aiming reticle
   }//End UseAim()
+  
+  void displaySys(float rectx, float recty, float rounded)
+  {
+    strokeWeight(2);
+    stroke(255);
+    rect(rectx, recty, syswidth, sysheight, rounded);
+  }//End displaySys()
 }//End class

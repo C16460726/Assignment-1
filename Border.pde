@@ -33,6 +33,5 @@ class Border
     line(width, y, x + s, y);
     line(width, 0, x + s * cos(angleB),  y + s * sin(angleB));
     
-    
   }//End displayB()
 }//End class Border
