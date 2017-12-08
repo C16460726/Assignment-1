@@ -29,6 +29,5 @@ void draw()
      r1.display(255);
      a.UseAim(50 * abs(cos(var)) + 17, 50 * abs(sin(var)) + 55, 20);
   }//End if
-  
   target.displaySys(475, 570, 8);
 }//End draw()

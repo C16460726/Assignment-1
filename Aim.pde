@@ -44,7 +44,13 @@ class Aim
   void displaySys(float rectx, float recty, float rounded)
   {
     strokeWeight(2);
-    stroke(255);
+    stroke(0, 0, 51);
     rect(rectx, recty, syswidth, sysheight, rounded);
+    
+    //Draw the lines to give the targeting system a more authentic feel
+    for ()
+    {
+      
+    }//End for
   }//End displaySys()
 }//End class
