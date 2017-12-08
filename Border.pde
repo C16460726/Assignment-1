@@ -19,10 +19,13 @@ class Border
       }//End for
     endShape(CLOSE);  //Include a CLOSE to complete the hexagon
     
-    line(rd, 0, x - s/1.4, y + s * sin(angleB));
+    line(0, 0, x - s * cos(angleB), y + s * sin(angleB));
     line(0, height/2, x - s, y);
-    //line(rd, height, );
+    line(0, height, x - s * cos(angleB), y - s * sin(angleB));
     
+    line(x, height, x, y + s);
+    
+    line(width, height, x + s * cos(angleB),  y - s * sin(angleB));
     line(width, height/2, x + s, y);
   }//End displayB()
 }//End class Border
