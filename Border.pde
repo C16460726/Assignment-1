@@ -6,7 +6,7 @@ class Border
     
   }//End Border()
   
-  void displayB(float x, float y, float gs)
+  void displayB(float x, float y, float s)
   {
     beginShape();
       stroke(25);
@@ -14,10 +14,12 @@ class Border
       for(int i = 0; i < 6; i++)
       {
         angleB = i * 2 * PI / 6;
-        vertex(x + gs * cos(angleB), y + gs * sin(angleB));
+        vertex(x + s * cos(angleB), y + s * sin(angleB));
       }//End for
     endShape(CLOSE);  //Include a CLOSE to complete the hexagon
     
-    
+    line(0, height/2, x - s, y);
+    line(width, height/2, x + s, y);
+    line(rd, 0, x - s/2, y - s + 15);
   }//End displayB()
 }//End class Border
