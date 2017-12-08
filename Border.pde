@@ -27,5 +27,6 @@ class Border
     
     line(width, height, x + s * cos(angleB),  y - s * sin(angleB));
     line(width, height/2, x + s, y);
+    
   }//End displayB()
 }//End class Border

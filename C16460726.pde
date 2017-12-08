@@ -25,5 +25,6 @@ void draw()
      a.UseAim(50 * abs(cos(var)) + 17, 50 * abs(sin(var)) + 55, 20);
   }//End if
   
+  //display the window frame of the TIE fighter in the center of the screen 
   b.displayB(width/2, height/2, 135);
 }//End draw()
