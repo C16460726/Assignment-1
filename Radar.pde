@@ -8,7 +8,8 @@ class Radar
   {
       noFill();
       rd = 125;   //diameter of the radar
-      rx = ry = rd/2; //Initialise the center of the radar
+      rx = rd/2; //Initialise the center of the radar
+      ry = rd/2;
   }
   
   void display(int col)
