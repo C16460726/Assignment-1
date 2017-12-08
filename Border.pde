@@ -15,12 +15,13 @@ class Border
       {
         angleB = i * 2 * PI / 8;
         vertex(x + s * cos(angleB), y + s * sin(angleB));
+        //line(, , x + s * cos(angleB), y + s * sin(angleB));
       }//End for
     endShape(CLOSE);  //Include a CLOSE to complete the hexagon
     
-    line(rd, 0, x - s/1.4, y - 100);
+    line(rd, 0, x - s/1.4, y + s * sin(angleB));
     line(0, height/2, x - s, y);
-    line(rd, );
+    //line(rd, height, );
     
     line(width, height/2, x + s, y);
   }//End displayB()
