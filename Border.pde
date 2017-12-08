@@ -20,7 +20,7 @@ class Border
     
     line(rd, 0, x - s/1.4, y - 100);
     line(0, height/2, x - s, y);
-    
+    line(rd, );
     
     line(width, height/2, x + s, y);
   }//End displayB()
