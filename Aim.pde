@@ -49,11 +49,6 @@ class Aim
     //Draw the lines to give the targeting system a more authentic feel
     pushMatrix();
     translate(pos.x, pos.y);
-    /*for (i = 0; i <= 27; i++)
-    {
-      line(i * 5, 0, syswidth/(8 - i), sysheight/4);
-      //line(5, 0, syswidth/7, sysheight/4);
-    }//End for*/
     
     /*
     line(0, 0, syswidth/8, sysheight/4);
@@ -100,26 +95,57 @@ class Aim
     println(mouseX - pos.x);
     */
     
-    line(0, 0, 70, sysheight/5 + 1);
-    line(7, 0, 70, sysheight/5 + 2);
-    line(16, 0, 70, sysheight/5 + 3);
-    line(25, 0, 70, sysheight/5 + 4);
-    line(34, 0, 70, sysheight/5 + 5);
-    line(43, 0, 70, sysheight/5 + 6);
-    line(52, 0, 70, sysheight/5 + 7);
-    line(61, 0, 70, sysheight/5 + 8);
+    int j = 1;
+    for (i = 7; i <= 133; i += 9)
+    {
+      
+      if (i <= 61)
+      {
+        j++;
+      }//End if
+      
+      else if (i == 70)
+      {
+        j = 13;
+      }//End if else
+      
+      else if (i >= 77)
+      {
+        if (j == 13)
+        {
+          j = 8;
+        }//End inner if
+        
+        else
+        {
+          //Start decreasing the size of each line
+          j--;
+        }//End inner else
+      }//End outer else
+      line(i, 0, 70, sysheight/6 + j);
+    }//End for
     
-    line(70, 0, 70, sysheight/5 + 13);
+    /*
+    //line(0, 0, 70, sysheight/6 + 1);
+    line(7, 0, 70, sysheight/6 + 2);
+    line(16, 0, 70, sysheight/6 + 3);
+    line(25, 0, 70, sysheight/6 + 4);
+    line(34, 0, 70, sysheight/6 + 5);
+    line(43, 0, 70, sysheight/6 + 6);
+    line(52, 0, 70, sysheight/6 + 7);
+    line(61, 0, 70, sysheight/6 + 8);
     
-    line(79, 0, 70, sysheight/5 + 8);
-    line(88, 0, 70, sysheight/5 + 7);
-    line(97, 0, 70, sysheight/5 + 6);
-    line(106, 0, 70, sysheight/5 + 5);
-    line(115, 0, 70, sysheight/5 + 4);
-    line(124, 0, 70, sysheight/5 + 3);
-    line(133, 0, 70, sysheight/5 + 2);
-    line(142 - 2, 0, 70, sysheight/5 + 1);
+    line(70, 0, 70, sysheight/6 + 13);
     
+    line(79, 0, 70, sysheight/6 + 8);
+    line(88, 0, 70, sysheight/6 + 7);
+    line(97, 0, 70, sysheight/6 + 6);
+    line(106, 0, 70, sysheight/6 + 5);
+    line(115, 0, 70, sysheight/6 + 4);
+    line(124, 0, 70, sysheight/6 + 3);
+    line(133, 0, 70, sysheight/6 + 2);
+    //line(142 - 2, 0, 70, sysheight/6 + 1);
+    */
     popMatrix();
     //translate(rectx + (syswidth/2), recty + (sysheight/4)); 
 
