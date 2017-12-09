@@ -22,7 +22,7 @@ class Aim
     translate(mouse.x, mouse.y);
     
     //Loop through n (20) number of times to create and move each arc
-    for (int i = 0; i <= n; i = i + 1) 
+    for (i = 0; i <= n; i = i + 1) 
     {
       t[i] = 2 * i * PI/n - PI/4;
       
@@ -112,7 +112,65 @@ class Aim
       }//End for
       
       //Draw lines along the left wall of the targeting system
-      line(0, sysheight/3, 20, sysheight/2);
+      j = 1;
+      for (float i = sysheight/3; i <= sysheight/3 + 28.3; i += 4.7)
+      {
+        if (i < sysheight/2)
+        {
+          j++;
+        }//End if
+        
+        else if (i == sysheight/2)
+        {
+          j += 5;
+        }//End if else
+        
+        else if (i > sysheight/2)
+        {
+          if (j == 27)
+          {
+            j = 22;
+          }//End inner if
+          
+          else
+          {
+            //Start decreasing the length of each line
+            j--;
+          }//End inner else
+        }//End outer else
+        line(0, i, 20 + j, sysheight/2);
+      }//End for
+      
+      //Draw lines along the right wall of the targeting system
+      j = 1;
+      for (float i = sysheight/3; i <= sysheight/3 + 28.3; i += 4.7)
+      {
+        if (i < sysheight/2)
+        {
+          j++;
+        }//End if
+        
+        else if (i == sysheight/2)
+        {
+          j += 5;
+        }//End if else
+        
+        else if (i > sysheight/2)
+        {
+          if (j == 27)
+          {
+            j = 22;
+          }//End inner if
+          
+          else
+          {
+            //Start decreasing the length of each line
+            j--;
+          }//End inner else
+        }//End outer else
+        line(syswidth - 2, i, syswidth - (20 + j), sysheight/2);
+      }//End for
+      /*line(0, sysheight/3, 20, sysheight/2);
       line(0, sysheight/3 + 4.7, 21, sysheight/2);
       line(0, sysheight/3 + 9.4, 22, sysheight/2);
       
@@ -121,7 +179,7 @@ class Aim
       line(0, sysheight/3 + 18.9, 22, sysheight/2);
       line(0, sysheight/3 + 23.6, 21, sysheight/2);
       line(0, sysheight/3 + 28.3, 20, sysheight/2);
-      
+      */
     popMatrix();
     strokeWeight(5);
     stroke(0, 0, 51);
