@@ -48,107 +48,111 @@ class Aim
     stroke(44, 157, 232);
     //Draw the lines to give the targeting system a more authentic feel
     pushMatrix();
-    translate(pos.x, pos.y);
-    
-    /*
-    line(0, 0, syswidth/8, sysheight/4);
-    line(9, 0, (syswidth/8) + 9, sysheight/4);
-    line(18, 0, (syswidth/8) + 17, sysheight/4);
-    line(27, 0, (syswidth/8) + 24, sysheight/4);
-    line(36, 0, (syswidth/8) + 30, sysheight/4);
-    line(45, 0, (syswidth/8) + 35, sysheight/4);
-    line(54, 0, (syswidth/8) + 39, sysheight/4);
-    line(63, 0, (syswidth/8) + 42, sysheight/4);
-    
-    line(72, 0, (syswidth/8) + 44, sysheight/4);
-    
-    line(81, 0, (syswidth/8) + 47, sysheight/4);
-    line(90, 0, (syswidth/8) + 51, sysheight/4);
-    line(99, 0, (syswidth/8) + 56, sysheight/4);
-    line(108, 0, (syswidth/8) + 62, sysheight/4);
-    line(117, 0, (syswidth/8) + 69, sysheight/4);
-    line(126, 0, (syswidth/8) + 77, sysheight/4);
-    line(135, 0, (syswidth/8) + 86, sysheight/4);
-    line(144 - 2, 0, (syswidth/8) + 96, sysheight/4);
-   */
-   
-   /*
-    line(0, 0, mouseX - pos.x, sysheight/4);
-    line(9, 0, mouseX - pos.x, sysheight/4);
-    line(18, 0, mouseX - pos.x, sysheight/4);
-    line(27, 0, mouseX - pos.x, sysheight/4);
-    line(36, 0, mouseX - pos.x, sysheight/4);
-    line(45, 0, mouseX - pos.x, sysheight/4);
-    line(54, 0, mouseX - pos.x, sysheight/4);
-    line(63, 0, mouseX - pos.x, sysheight/4);
-    
-    line(72, 0, mouseX - pos.x, sysheight/4);
-    
-    line(81, 0, mouseX - pos.x, sysheight/4);
-    line(90, 0, mouseX - pos.x, sysheight/4);
-    line(99, 0, mouseX - pos.x, sysheight/4);
-    line(108, 0, mouseX - pos.x, sysheight/4);
-    line(117, 0, mouseX - pos.x, sysheight/4);
-    line(126, 0, mouseX - pos.x, sysheight/4);
-    line(135, 0, mouseX - pos.x, sysheight/4);
-    line(144 - 2, 0, mouseX - pos.x, sysheight/4);
-    println(mouseX - pos.x);
-    */
-    
-    int j = 1;
-    for (i = 7; i <= 133; i += 9)
-    {
+      translate(pos.x, pos.y);
+     
+     /*
+      line(0, 0, mouseX - pos.x, sysheight/4);
+      line(9, 0, mouseX - pos.x, sysheight/4);
+      line(18, 0, mouseX - pos.x, sysheight/4);
+      line(27, 0, mouseX - pos.x, sysheight/4);
+      line(36, 0, mouseX - pos.x, sysheight/4);
+      line(45, 0, mouseX - pos.x, sysheight/4);
+      line(54, 0, mouseX - pos.x, sysheight/4);
+      line(63, 0, mouseX - pos.x, sysheight/4);
       
-      if (i <= 61)
-      {
-        j++;
-      }//End if
+      line(72, 0, mouseX - pos.x, sysheight/4);
       
-      else if (i == 70)
-      {
-        j = 13;
-      }//End if else
+      line(81, 0, mouseX - pos.x, sysheight/4);
+      line(90, 0, mouseX - pos.x, sysheight/4);
+      line(99, 0, mouseX - pos.x, sysheight/4);
+      line(108, 0, mouseX - pos.x, sysheight/4);
+      line(117, 0, mouseX - pos.x, sysheight/4);
+      line(126, 0, mouseX - pos.x, sysheight/4);
+      line(135, 0, mouseX - pos.x, sysheight/4);
+      line(144 - 2, 0, mouseX - pos.x, sysheight/4);
+      println(mouseX - pos.x);
+      */
       
-      else if (i >= 77)
+      int j = 1;
+      for (i = 7; i <= 133; i += 9)
       {
-        if (j == 13)
-        {
-          j = 8;
-        }//End inner if
         
-        else
+        if (i <= 61)
         {
-          //Start decreasing the size of each line
-          j--;
-        }//End inner else
-      }//End outer else
-      line(i, 0, 70, sysheight/6 + j);
-    }//End for
-    
-    /*
-    //line(0, 0, 70, sysheight/6 + 1);
-    line(7, 0, 70, sysheight/6 + 2);
-    line(16, 0, 70, sysheight/6 + 3);
-    line(25, 0, 70, sysheight/6 + 4);
-    line(34, 0, 70, sysheight/6 + 5);
-    line(43, 0, 70, sysheight/6 + 6);
-    line(52, 0, 70, sysheight/6 + 7);
-    line(61, 0, 70, sysheight/6 + 8);
-    
-    line(70, 0, 70, sysheight/6 + 13);
-    
-    line(79, 0, 70, sysheight/6 + 8);
-    line(88, 0, 70, sysheight/6 + 7);
-    line(97, 0, 70, sysheight/6 + 6);
-    line(106, 0, 70, sysheight/6 + 5);
-    line(115, 0, 70, sysheight/6 + 4);
-    line(124, 0, 70, sysheight/6 + 3);
-    line(133, 0, 70, sysheight/6 + 2);
-    //line(142 - 2, 0, 70, sysheight/6 + 1);
-    */
+          j++;
+        }//End if
+        
+        else if (i == 70)
+        {
+          j = 13;
+        }//End if else
+        
+        else if (i >= 77)
+        {
+          if (j == 13)
+          {
+            j = 8;
+          }//End inner if
+          
+          else
+          {
+            //Start decreasing the size of each line
+            j--;
+          }//End inner else
+        }//End outer else
+        line(i, 0, 70, sysheight/6 + j);
+      }//End for
+      
+      /*
+      line(7, 0, 70, sysheight/6 + 2);
+      line(16, 0, 70, sysheight/6 + 3);
+      line(25, 0, 70, sysheight/6 + 4);
+      line(34, 0, 70, sysheight/6 + 5);
+      line(43, 0, 70, sysheight/6 + 6);
+      line(52, 0, 70, sysheight/6 + 7);
+      line(61, 0, 70, sysheight/6 + 8);
+      
+      line(70, 0, 70, sysheight/6 + 13);
+      
+      line(79, 0, 70, sysheight/6 + 8);
+      line(88, 0, 70, sysheight/6 + 7);
+      line(97, 0, 70, sysheight/6 + 6);
+      line(106, 0, 70, sysheight/6 + 5);
+      line(115, 0, 70, sysheight/6 + 4);
+      line(124, 0, 70, sysheight/6 + 3);
+      line(133, 0, 70, sysheight/6 + 2);
+      */
+      
+      j = 1;
+      for (i = 7; i <= 133; i += 9)
+      {
+        
+        if (i <= 61)
+        {
+          j++;
+        }//End if
+        
+        else if (i == 70)
+        {
+          j = 13;
+        }//End if else
+        
+        else if (i >= 77)
+        {
+          if (j == 13)
+          {
+            j = 8;
+          }//End inner if
+          
+          else
+          {
+            //Start decreasing the size of each line
+            j--;
+          }//End inner else
+        }//End outer else
+        line(i, sysheight, 70, sysheight/1.2 - j);
+      }//End for
     popMatrix();
-    //translate(rectx + (syswidth/2), recty + (sysheight/4)); 
-
     strokeWeight(5);
     stroke(0, 0, 51);
     rect(rectx, recty, syswidth, sysheight, rounded);
