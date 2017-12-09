@@ -43,12 +43,39 @@ class Aim
   
   void displaySys(float rectx, float recty, float rounded)
   {
+    PVector pos = new PVector(rectx + 2, recty);
     strokeWeight(2);
     stroke(44, 157, 232);
     //Draw the lines to give the targeting system a more authentic feel
+    pushMatrix();
+    translate(pos.x, pos.y);
+    /*for (i = 0; i <= 27; i++)
+    {
+      line(i * 5, 0, syswidth/(8 - i), sysheight/4);
+      //line(5, 0, syswidth/7, sysheight/4);
+    }//End for*/
+    
+    line(0, 0, syswidth/8, sysheight/4);
+    line(9, 0, (syswidth/8) + 9, sysheight/4);
+    line(18, 0, (syswidth/8) + 17, sysheight/4);
+    line(27, 0, (syswidth/8) + 24, sysheight/4);
+    line(36, 0, (syswidth/8) + 30, sysheight/4);
+    line(45, 0, (syswidth/8) + 35, sysheight/4);
+    line(54, 0, (syswidth/8) + 39, sysheight/4);
+    line(63, 0, (syswidth/8) + 42, sysheight/4);
+    
+    line(72, 0, (syswidth/8) + 44, sysheight/4);
+    
+    line(81, 0, (syswidth/8) + 47, sysheight/4);
+    line(90, 0, (syswidth/8) + 51, sysheight/4);
+    line(99, 0, (syswidth/8) + 56, sysheight/4);
+    line(108, 0, (syswidth/8) + 62, sysheight/4);
+    line(117, 0, (syswidth/8) + 69, sysheight/4);
+    line(126, 0, (syswidth/8) + 77, sysheight/4);
+    line(135, 0, (syswidth/8) + 86, sysheight/4);
+    line(144 - 2, 0, (syswidth/8) + 96, sysheight/4);
    
-    line(rectx + 5, recty, rectx + syswidth/8, recty + sysheight/4);
-    //line(
+    popMatrix();
     //translate(rectx + (syswidth/2), recty + (sysheight/4)); 
 
     strokeWeight(5);
