@@ -55,6 +55,7 @@ class Aim
       //line(5, 0, syswidth/7, sysheight/4);
     }//End for*/
     
+    /*
     line(0, 0, syswidth/8, sysheight/4);
     line(9, 0, (syswidth/8) + 9, sysheight/4);
     line(18, 0, (syswidth/8) + 17, sysheight/4);
@@ -74,7 +75,51 @@ class Aim
     line(126, 0, (syswidth/8) + 77, sysheight/4);
     line(135, 0, (syswidth/8) + 86, sysheight/4);
     line(144 - 2, 0, (syswidth/8) + 96, sysheight/4);
+   */
    
+   /*
+    line(0, 0, mouseX - pos.x, sysheight/4);
+    line(9, 0, mouseX - pos.x, sysheight/4);
+    line(18, 0, mouseX - pos.x, sysheight/4);
+    line(27, 0, mouseX - pos.x, sysheight/4);
+    line(36, 0, mouseX - pos.x, sysheight/4);
+    line(45, 0, mouseX - pos.x, sysheight/4);
+    line(54, 0, mouseX - pos.x, sysheight/4);
+    line(63, 0, mouseX - pos.x, sysheight/4);
+    
+    line(72, 0, mouseX - pos.x, sysheight/4);
+    
+    line(81, 0, mouseX - pos.x, sysheight/4);
+    line(90, 0, mouseX - pos.x, sysheight/4);
+    line(99, 0, mouseX - pos.x, sysheight/4);
+    line(108, 0, mouseX - pos.x, sysheight/4);
+    line(117, 0, mouseX - pos.x, sysheight/4);
+    line(126, 0, mouseX - pos.x, sysheight/4);
+    line(135, 0, mouseX - pos.x, sysheight/4);
+    line(144 - 2, 0, mouseX - pos.x, sysheight/4);
+    println(mouseX - pos.x);
+    */
+    
+    line(0, 0, 70, sysheight/5 + 1);
+    line(7, 0, 70, sysheight/5 + 2);
+    line(16, 0, 70, sysheight/5 + 3);
+    line(25, 0, 70, sysheight/5 + 4);
+    line(34, 0, 70, sysheight/5 + 5);
+    line(43, 0, 70, sysheight/5 + 6);
+    line(52, 0, 70, sysheight/5 + 7);
+    line(61, 0, 70, sysheight/5 + 8);
+    
+    line(70, 0, 70, sysheight/5 + 13);
+    
+    line(79, 0, 70, sysheight/5 + 8);
+    line(88, 0, 70, sysheight/5 + 7);
+    line(97, 0, 70, sysheight/5 + 6);
+    line(106, 0, 70, sysheight/5 + 5);
+    line(115, 0, 70, sysheight/5 + 4);
+    line(124, 0, 70, sysheight/5 + 3);
+    line(133, 0, 70, sysheight/5 + 2);
+    line(142 - 2, 0, 70, sysheight/5 + 1);
+    
     popMatrix();
     //translate(rectx + (syswidth/2), recty + (sysheight/4)); 
 
