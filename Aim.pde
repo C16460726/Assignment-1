@@ -170,20 +170,9 @@ class Aim
         }//End outer else
         line(syswidth - 2, i, syswidth - (20 + j), sysheight/2);
       }//End for
-      /*line(0, sysheight/3, 20, sysheight/2);
-      line(0, sysheight/3 + 4.7, 21, sysheight/2);
-      line(0, sysheight/3 + 9.4, 22, sysheight/2);
-      
-      line(0, sysheight/2, 25, sysheight/2);
-      
-      line(0, sysheight/3 + 18.9, 22, sysheight/2);
-      line(0, sysheight/3 + 23.6, 21, sysheight/2);
-      line(0, sysheight/3 + 28.3, 20, sysheight/2);
-      */
     popMatrix();
     strokeWeight(5);
     stroke(0, 0, 51);
     rect(rectx, recty, syswidth, sysheight, rounded);
-    
   }//End displaySys()
 }//End class
