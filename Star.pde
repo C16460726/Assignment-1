@@ -1,12 +1,13 @@
 float speed;
-float locx, locy;
-float size = random(1, 10);
-float z;
-float sx, sy;
-float pz, px, py;
 
 class Star
-{ 
+{
+  float locx, locy;
+  float size = random(1, 10);
+  float z;
+  float sx, sy;
+  float pz, px, py;
+  
   Star()
   {
     speed = 10;
@@ -37,7 +38,7 @@ class Star
   
   boolean timeToReset()
   {
-    if(z < 1)
+    if (z < 1)
     {
       return true;
     }
@@ -51,10 +52,10 @@ class Star
   void travel()
   {
     z = z - speed;
-    if(timeToReset())
+    if (timeToReset())
     {
       z = width;
-    }
+    }//End if
   }
   
 }//End class
