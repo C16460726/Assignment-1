@@ -2,8 +2,9 @@ Star[] space;
 Radar r1;
 Aim a, target;
 Border b, symbol;
-float var;
 
+float var;
+  
 void setup()
 {
   size(900, 800);
@@ -24,7 +25,7 @@ void draw()
 {
   background(0);
    pushMatrix();
-   translate(width/2, height);
+   translate(width/2, height/2);
    for(i = 0; i < space.length; i++)
    {
       space[i].travel();
