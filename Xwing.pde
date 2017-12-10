@@ -3,8 +3,8 @@ class Xwing
 {
   Xwing()
   {
-    xwidth = 85;
-    xheight = 20;
+    xwidth = 50;
+    xheight = 15;
   }//End constructor
   
   void displayxw(float x1, float y1, float x2, float y2)
@@ -14,13 +14,30 @@ class Xwing
     noStroke();
     fill(165);
     rect(xwing1.x, xwing1.y, xwidth, xheight, 4);
-    rect(xwing2.x, xwing2.y, xwidth, xheight);
+    rect(xwing2.x, xwing2.y, xwidth, xheight, 4);
+    
+    //Display the wings
     stroke(200);
     strokeWeight(5);
-    //Display the wings
     line(xwing1.x, xwing1.y + xheight/2, xwing1.x - 30, xwing1.y - 5);
     line(xwing1.x, xwing1.y + xheight/2, xwing1.x - 30, xwing1.y + xheight + 5);
     line(xwing1.x + xwidth, xwing1.y + xheight/2, xwing1.x + xwidth + 30, xwing1.y - 5);
     line(xwing1.x + xwidth, xwing1.y + xheight/2, xwing1.x + xwidth + 30, xwing1.y + xheight + 5);
+    
+    //Add lights
+    
+    /*
+      fill(255, 90, 90);
+      strokeWeight(3);
+      stroke(255, 90, 90, 250);
+      ellipse(xwing1.x, xwing1.y + 2, 5, 5);
+      noFill();
+      stroke(255, 90, 90, 150);
+      ellipse(xwing1.x, xwing1.y + 2, 10, 10);
+      stroke(255, 90, 90, 50);
+      ellipse(xwing1.x, xwing1.y + 2, 15, 15);
+      stroke(255, 90, 90, 0);
+    */
+    //ellipse(xwing1.x, xwing1.y, 20, 20);
   }//End displayxw()
 }//End class Xwing
