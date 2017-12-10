@@ -1,15 +1,15 @@
-float speed = 10;
-//int movingSpeed = 0;
+float speed;
+float locx, locy;
+float size = random(1, 10);
+float z;
+float sx, sy;
+float pz, px, py;
+
 class Star
-{
-  float locx, locy;
-  float size = random(1, 10);
-  float z;
-  float sx, sy;
-  float pz, px, py;
-  
+{ 
   Star()
   {
+    speed = 10;
     z = random(width);
     locx = random(-width/2,width/2);
     locy = random(-height/2,height/2);
