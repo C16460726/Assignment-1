@@ -25,20 +25,20 @@ class Star
     sy = map(locy/z, 0, 1, 0, height);
     
     ellipse(sx, sy, size, size);
-  }
+  }//End backgroundS()
   
   boolean timeToReset()
   {
     if (z < 1)
     {
       return true;
-    }
+    }//End if
     
     else 
     {
       return false;
-    }
-  }
+    }//End else
+  }//End timeToReset()
   
   void travel()
   {
@@ -47,6 +47,5 @@ class Star
     {
       z = width;
     }//End if
-  }
-  
+  }//End travel()
 }//End class

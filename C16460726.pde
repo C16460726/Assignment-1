@@ -1,7 +1,9 @@
 Star[] space;
 Radar r1;
 Aim a, target;
-Border b, symbol;
+Border b;
+Symbol s;
+
 
 float var;
   
@@ -15,7 +17,7 @@ void setup()
   }//End for
   
   b = new Border();
-  symbol = new Border();
+  s = new Symbol();
   r1 = new Radar();
   a = new Aim();
   target = new Aim();
@@ -25,19 +27,21 @@ void draw()
 {
   background(0);
    pushMatrix();
-   translate(width/2, height/2);
-   for(i = 0; i < space.length; i++)
-   {
-      space[i].travel();
-      space[i].backgroundS();
-   }
+     translate(width/2, height/2);
+     for(i = 0; i < space.length; i++)
+     {
+        space[i].travel();
+        space[i].backgroundS();
+     }
    popMatrix(); 
   //Display the radar
   r1.display(255); 
   
   //display the window frame of the TIE fighter in the center of the screen 
   b.displayB(width/2, height/2, 135);
-  //symbol.displayS();
+  
+  //s.displayS();
+  
   //Display the targeting system
   target.displaySys(475, 570, 8);
   
