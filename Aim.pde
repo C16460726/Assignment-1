@@ -6,13 +6,13 @@ class Aim
   //Constructor for the aiming reticle
   Aim()
   {
-    noFill();
     syswidth = 145;
     sysheight = 85;
   }
   
   void UseAim(float R, float r, float n)
   {
+    noFill();
     //To use the aiming reticle
     PVector mouse = new PVector(mouseX, mouseY);
     strokeWeight(2);
@@ -43,6 +43,7 @@ class Aim
   
   void displaySys(float rectx, float recty, float rounded)
   {
+    noFill();
     PVector pos = new PVector(rectx + 2, recty);
     strokeWeight(2);
     stroke(44, 157, 232);

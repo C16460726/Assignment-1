@@ -1,4 +1,4 @@
-Star stars;
+Star[] space;
 Radar r1;
 Aim a, target;
 Border b, symbol;
@@ -7,7 +7,7 @@ float var;
 void setup()
 {
   size(900, 800);
-  Star[] space = new Star[500];
+  space = new Star[500];
   for(i = 0; i < space.length; i++)
   {
     space[i] = new Star();
@@ -23,7 +23,14 @@ void setup()
 void draw()
 {
   background(0);
-   
+   pushMatrix();
+   translate(width/2, height);
+   for(i = 0; i < space.length; i++)
+   {
+      space[i].travel();
+      space[i].backgroundS();
+   }
+   popMatrix(); 
   //Display the radar
   r1.display(255); 
   

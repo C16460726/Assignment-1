@@ -15,6 +15,7 @@ class Radar
   
   void display(int col)
   {
+    noFill();
     //PVector class for the center of the radar
     PVector radcenter = new PVector(rx, ry);
     

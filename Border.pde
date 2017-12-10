@@ -11,6 +11,7 @@ class Border
   
   void displayB(float x, float y, float s)
   {
+    noFill();
     xf = yf = 0;
     beginShape();
       stroke(25);
