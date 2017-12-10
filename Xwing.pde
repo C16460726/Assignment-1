@@ -1,9 +1,10 @@
 float xwidth, xheight;
+float lightx, lighty;
 class Xwing
 {
   Xwing()
   {
-    xwidth = 50;
+    xwidth = 30;
     xheight = 15;
   }//End constructor
   
@@ -25,7 +26,54 @@ class Xwing
     line(xwing1.x + xwidth, xwing1.y + xheight/2, xwing1.x + xwidth + 30, xwing1.y + xheight + 5);
     
     //Add lights
+    strokeWeight(3);
+    fill(255, 90, 90);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(255, 90, 90, 250 - (i * 100));
+      ellipse(xwing1.x, xwing1.y + 2, 5 + (i * 5), 5 + (i * 5));
+    }//End for
     
+    fill(255, 90, 90);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(255, 90, 90, 250 - (i * 100));
+      ellipse(xwing1.x + xwidth, xwing1.y + 2, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+    
+    fill(255, 90, 90);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(255, 90, 90, 250 - (i * 100));
+      ellipse(xwing1.x, xwing1.y + xheight, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+    
+    fill(255, 90, 90);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(255, 90, 90, 250 - (i * 100));
+      ellipse(xwing1.x + xwidth, xwing1.y + xheight, 5 + (i * 5), 5 + (i * 5));
+    }//End for
     /*
       fill(255, 90, 90);
       strokeWeight(3);
