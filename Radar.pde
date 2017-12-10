@@ -10,8 +10,8 @@ class Radar
       rd = 125;   //diameter of the radar
       //Initialise the center of the radar
       rx = rd * 2.8;
-      ry = height - (rd * 1.2);
-  }
+      ry = height - rd;
+  }//End constructor
   
   void display(int col)
   {
@@ -22,7 +22,7 @@ class Radar
     strokeWeight(1);
     stroke(0, col, 0);
     //Create the cross hairs
-    line(rx, height - (rd * 1.7), rx, height - (rd * 0.7));
+    line(rx, height - (rd * 1.5), rx, height - (rd/2));
     line(rd * 3.3, ry, rd * 2.3,  ry);
     
     //Create four circles for the radar in increasing size, the outer circle has a bigger strokeWeight.

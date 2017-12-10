@@ -46,7 +46,7 @@ void draw()
   //s.displayS();
   
   //Display the targeting system
-  target.displaySys(475, 570, 8);
+  target.displaySys(485, 630, 8);
   
   //Only display the aiming reticle if the mouse is not hovering over the radar
   if (dist(rx, ry, mouseX, mouseY) >= rd/2 && mousePressed == true)
