@@ -16,7 +16,6 @@ void setup()
   {
     space[i] = new Star();
   }//End for
-  
   xw = new Xwing();
   ds = new DeathStar();
   b = new Border();
