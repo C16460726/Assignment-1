@@ -3,7 +3,8 @@ Radar r1;
 Aim a, target;
 Border b;
 Symbol s;
-
+DeathStar ds;
+Xwing xw;
 
 float var;
   
@@ -16,6 +17,8 @@ void setup()
     space[i] = new Star();
   }//End for
   
+  xw = new Xwing();
+  ds = new DeathStar();
   b = new Border();
   s = new Symbol();
   r1 = new Radar();
@@ -38,7 +41,7 @@ void draw()
   r1.display(255); 
   
   //display the window frame of the TIE fighter in the center of the screen 
-  b.displayB(width/2, height/2, 135);
+  b.displayB(width/2, height/2, 225);
   
   //s.displayS();
   
