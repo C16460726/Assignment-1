@@ -23,15 +23,24 @@ class Border
       }//End for
     endShape(CLOSE);  //Include a CLOSE to complete the octagon
     
-    line(0, 0, x - s * cos(angleB), y + s * sin(angleB));
+    line(100, 100, x - s * cos(angleB), y + s * sin(angleB));
     line(0, y, x - s, y);
-    line(0, height, x - s * cos(angleB), y - s * sin(angleB));
+    line(100, height - 100, x - s * cos(angleB), y - s * sin(angleB));
     
     line(x, height, x, y + s);
     line(x, 0, x, y - s);
     
-    line(width, height, x + s * cos(angleB),  y - s * sin(angleB));
+    line(width - 100, height - 100, x + s * cos(angleB),  y - s * sin(angleB));
     line(width, y, x + s, y);
-    line(width, 0, x + s * cos(angleB),  y + s * sin(angleB));
+    line(width - 100, 100, x + s * cos(angleB),  y + s * sin(angleB));
+
+    //Ring
+    noFill();
+    strokeWeight(100);
+    stroke(15);
+    ellipse(width/2, height/2, 900, 850);
+    strokeWeight(150);
+    stroke(0);
+    ellipse(width/2, height/2, 1125, 1125);
   }//End displayB()
 }//End class Border

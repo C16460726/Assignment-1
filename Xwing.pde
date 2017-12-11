@@ -115,5 +115,42 @@ class Xwing
       xwing2y += 3;
     }//End if
     
+    if (xwing1y >= height + 150)
+    {
+      xwing1x = 0;
+      xwing1y = 15;
+      shot1 = false;
+      flyin1 = true;
+    }//End if
+    
+    if (xwing2y >= height + 150)
+    {
+      xwing2x = width;
+      xwing2y = 15;
+      shot2 = false;
+      flyin2 = true;
+    }//End if
+    
+    if (flyin1)
+    {
+      xwing1x += 4;
+      xwing1y += 4;
+    }//End if
+    
+    if (flyin2)
+    {
+      xwing2x -= 4;
+      xwing2y += 4;
+    }//End if
+    
+    if (xwing1y >= 365)
+    {
+      flyin1 = false;
+    }//End if
+    
+    if (xwing2y >= 365)
+    {
+      flyin2 = false;
+    }//End if
   }//End displayxw()
 }//End class Xwing

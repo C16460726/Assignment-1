@@ -15,10 +15,7 @@ class Aim
     noFill();
     //To use the aiming reticle
     PVector mouse = new PVector(mouseX, mouseY);
-    if (mousePressed == true)
-    {
-        shoot();
-    }//End if
+    
     strokeWeight(2);
     stroke(255);
     pushMatrix();
@@ -263,24 +260,30 @@ class Aim
       ellipse(xwing.x + xwidth, xwing.y + xheight, 5 + (i * 5), 5 + (i * 5));
     }//End for
   }//End xwtarget()
+  
+  void shoot()
+  {
+    //Draw two beams
+    strokeWeight(7);
+    stroke(100, 255, 50);
+    line(mouseX, mouseY, 100, height);
+    line(mouseX, mouseY, width - 100, height);
+    
+    if(dist(mouseX, mouseY, xwing1x, xwing1y) < xwidth)
+    {
+      shot1 = true;
+      explosion(xwing1x, xwing1y);
+    }//End if
+    
+    if(dist(mouseX, mouseY, xwing2x, xwing2y) < xwidth)
+    {
+      shot2 = true;
+      explosion(xwing2x, xwing2y);
+    }//End if
+  }//End shoot()
+  
+  void explosion(float x, float y)
+  {
+    
+  }//End explosion()
 }//End class
-
-void shoot()
-{
-  //Draw two beams
-  strokeWeight(7);
-  stroke(100, 255, 50);
-  line(mouseX, mouseY, 100, height);
-  line(mouseX, mouseY, width - 100, height);
-  
-  
-  if(dist(mouseX, mouseY, xwing1x, xwing1y) < xwidth)
-  {
-    shot1 = true;
-  }//End if
-  
-  if(dist(mouseX, mouseY, xwing2x, xwing2y) < xwidth)
-  {
-    shot2 = true;
-  }//End if
-}//End shoot()

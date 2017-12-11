@@ -27,25 +27,13 @@ class Star
     ellipse(sx, sy, size, size);
   }//End backgroundS()
   
-  boolean timeToReset()
-  {
-    if (z < 1)
-    {
-      return true;
-    }//End if
-    
-    else 
-    {
-      return false;
-    }//End else
-  }//End timeToReset()
-  
   void travel()
   {
     z = z - speed;
-    if (timeToReset())
+    if (z < 1)
     {
       z = width;
     }//End if
+    
   }//End travel()
 }//End class

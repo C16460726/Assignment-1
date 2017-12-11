@@ -55,15 +55,15 @@ class Radar
         angle = angle + 0.02;
       }//End else
       
-        x = map(300, 0, width, rx - rd/2, rx + rd/2);
-        y = map(365, 0, height, ry - rd/2, ry + rd/2);
-        
-        x2 = map(500, 0, width, rx - rd/2, rx + rd/2);
-        y2 = map(360, 0, height, ry - rd/2, ry + rd/2);
-        
-        noStroke();
-        fill(0, 250, 0, 150);
-        ellipse(x, y, 5, 5);
-        ellipse(x2, y2, 5, 5);
+      x = map(xwing1x, 0, width, rx - rd/3, rx + rd/3);
+      y = map(xwing1y, 0, height, ry - rd/3, ry + rd/3);
+      
+      x2 = map(xwing2x, 0, width, rx - rd/3, rx + rd/3);
+      y2 = map(xwing2y, 0, height, ry - rd/3, ry + rd/3);
+      
+      noStroke();
+      fill(0, 250, 0, 150);
+      ellipse(x, y, 8, 8);
+      ellipse(x2, y2, 8, 8);
   }//End display()
 }//End Radar class
