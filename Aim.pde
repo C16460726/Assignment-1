@@ -8,6 +8,7 @@ class Aim
   {
     syswidth = 145;
     sysheight = 85;
+    explode_spd = 5;
   }
   
   void UseAim(float R, float r, float n)
@@ -272,18 +273,18 @@ class Aim
     if(dist(mouseX, mouseY, xwing1x, xwing1y) < xwidth)
     {
       shot1 = true;
-      explosion(xwing1x, xwing1y);
+      explosion();
     }//End if
     
     if(dist(mouseX, mouseY, xwing2x, xwing2y) < xwidth)
     {
       shot2 = true;
-      explosion(xwing2x, xwing2y);
+      explosion();
     }//End if
   }//End shoot()
   
-  void explosion(float x, float y)
+  void explosion()
   {
     
-  }//End explosion()
+  }//End explosion
 }//End class

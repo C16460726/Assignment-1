@@ -1,12 +1,14 @@
 float xwidth, xheight;
 float lightx, lighty;
 float xwx, xwy;
+float explosionsize1, explosionsize2;
 class Xwing
 {
   Xwing()
   {
     xwidth = 30;
     xheight = 15;
+    explosionsize1 = explosionsize2 = 5;
   }//End constructor
   
   void displayxw(float x1, float y1)
@@ -107,12 +109,18 @@ class Xwing
     {
       xwing1x -= 2.5;
       xwing1y += 3;
+      fill(249, 116, 15);
+      ellipse(xwing1x + xwidth/2, xwing1y + xheight/2, explosionsize1, explosionsize1);
+      explosionsize1++;
     }//End if
     
     if (shot2)
     {
       xwing2x += 2.5;
       xwing2y += 3;
+      fill(249, 116, 15);
+      ellipse(xwing2x + xwidth/2, xwing2y + xheight/2, explosionsize2, explosionsize2);
+      explosionsize2++;
     }//End if
     
     if (xwing1y >= height + 150)
@@ -120,7 +128,7 @@ class Xwing
       xwing1x = 0;
       xwing1y = 15;
       shot1 = false;
-      flyin1 = true;
+      explosionsize1 = 5;
     }//End if
     
     if (xwing2y >= height + 150)
@@ -128,29 +136,19 @@ class Xwing
       xwing2x = width;
       xwing2y = 15;
       shot2 = false;
-      flyin2 = true;
+      explosionsize2 = 5;
     }//End if
     
-    if (flyin1)
+    if (xwing1y <= 365)
     {
       xwing1x += 4;
       xwing1y += 4;
     }//End if
     
-    if (flyin2)
+    if (xwing2y <= 365)
     {
       xwing2x -= 4;
       xwing2y += 4;
-    }//End if
-    
-    if (xwing1y >= 365)
-    {
-      flyin1 = false;
-    }//End if
-    
-    if (xwing2y >= 365)
-    {
-      flyin2 = false;
     }//End if
   }//End displayxw()
 }//End class Xwing

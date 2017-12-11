@@ -4,14 +4,15 @@ Aim a, target, xwtarget;
 Border b;
 Symbol s;
 DeathStar ds;
-Xwing xw, xw2, xwn, xwn2;
+Xwing xw, xw2;
 
 float xwing1x, xwing1y, xwing2x, xwing2y;
 float var;
-boolean shot1, shot2, flyin1, flyin2;
+boolean shot1, shot2;
 
 void setup()
 {
+  smooth();
   size(900, 800);
   
   space = new Star[500];
@@ -22,8 +23,6 @@ void setup()
   
   xw = new Xwing();
   xw2 = new Xwing();
-  xwn = new Xwing();
-  xwn2 = new Xwing();
   ds = new DeathStar();
   b = new Border();
   s = new Symbol();
