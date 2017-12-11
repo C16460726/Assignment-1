@@ -177,9 +177,9 @@ class Aim
     rect(rectx, recty, syswidth, sysheight, rounded);
   }//End displaySys()
   
-  void target(float xwx, float xwy)
+  void target(float xwx1, float xwy1)
   {
-    PVector xwing = new PVector(xwx, xwy);
+    PVector xwing = new PVector(xwx1, xwy1);
     stroke(239, 35, 109);
     rect(xwing.x, xwing.y, xwidth, xheight, 4);
     rect(xwing.x + 8, xwing.y + 3, 14, 9);

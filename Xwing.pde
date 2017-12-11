@@ -1,6 +1,6 @@
 float xwidth, xheight;
 float lightx, lighty;
-float x, y;
+float xwx, xwy;
 class Xwing
 {
   Xwing()
@@ -11,15 +11,14 @@ class Xwing
   
   void displayxw(float x1, float y1)
   {
-    x = x1;
-    y = y1;
-    PVector xwing = new PVector(x, y);
+    xwx = x1;
+    xwy = y1;
+    PVector xwing = new PVector(xwx, xwy);
     noStroke();
     fill(165);
     rect(xwing.x, xwing.y, xwidth, xheight, 4);
     fill(228, 180, 68);
     rect(xwing.x + 8, xwing.y + 3, 14, 9);
-    
     
     //Display the wings
     stroke(200);
