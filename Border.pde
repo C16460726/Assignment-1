@@ -40,7 +40,7 @@ class Border
     stroke(15);
     ellipse(width/2, height/2, 900, 850);
     strokeWeight(150);
-    stroke(0);
+    stroke(138, 138, 138);
     ellipse(width/2, height/2, 1125, 1125);
   }//End displayB()
 }//End class Border
