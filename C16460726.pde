@@ -1,13 +1,12 @@
 Star[] space;
 Radar r1;
-Aim a, target;
+Aim a, target, xwtarget;
 Border b;
 Symbol s;
 DeathStar ds;
-Xwing xw;
+Xwing xw, xw2;
 
 float var;
-  
 void setup()
 {
   size(900, 800);
@@ -17,12 +16,14 @@ void setup()
     space[i] = new Star();
   }//End for
   xw = new Xwing();
+  xw2 = new Xwing();
   ds = new DeathStar();
   b = new Border();
   s = new Symbol();
   r1 = new Radar();
   a = new Aim();
   target = new Aim();
+  xwtarget = new Aim();
 }//End setup()
 
 void draw()
@@ -40,7 +41,7 @@ void draw()
   r1.display(255); 
   
   xw.displayxw(300, 365);//, 500, 360);
-  xw.displayxw(500, 360);
+  xw2.displayxw(500, 360);
   
   //display the window frame of the TIE fighter in the center of the screen 
   b.displayB(width/2, height/2, 225);
@@ -57,6 +58,9 @@ void draw()
      r1.display(255);
      a.UseAim(50 * abs(cos(var)) + 17, 50 * abs(sin(var)) + 55, 20);
      
-     
+     if (dist(mouseX, mouseY, 300, 365) < xwidth || dist(mouseX, mouseY, 500, 360) < xwidth)
+     {
+       xwtarget.target(544, 665);
+     }
   }//End if
 }//End draw()

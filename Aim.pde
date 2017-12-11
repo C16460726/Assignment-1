@@ -176,4 +176,89 @@ class Aim
     stroke(0, 0, 51);
     rect(rectx, recty, syswidth, sysheight, rounded);
   }//End displaySys()
+  
+  void target(float xwx, float xwy)
+  {
+    PVector xwing = new PVector(xwx, xwy);
+    stroke(239, 35, 109);
+    rect(xwing.x, xwing.y, xwidth, xheight, 4);
+    rect(xwing.x + 8, xwing.y + 3, 14, 9);
+    
+    //Display the wings
+    stroke(239, 35, 109);
+    strokeWeight(3);
+    float w = 0;
+    float h;
+    float c = - 30;
+    for(i = 1; i <= 4; i++)
+    {
+      if (i > 2)
+      {
+        w = xwidth;
+        c = xwidth + 30;
+      }//End if
+      
+      if (i % 2 == 0)
+      {
+        h = xheight + 5;
+      }//End if
+      
+      else
+      {
+        h = - 5;
+      }//End else
+      
+      line(xwing.x + w, xwing.y + xheight/2, xwing.x + c, xwing.y + h);
+    }//End for
+    
+    //Add lights
+    strokeWeight(3);
+    fill(239, 35, 109);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(239, 35, 109, 250 - (i * 100));
+      ellipse(xwing.x, xwing.y + 2, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+    
+    fill(239, 35, 109);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(239, 35, 109, 250 - (i * 100));
+      ellipse(xwing.x + xwidth, xwing.y + 2, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+    
+    fill(239, 35, 109);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(239, 35, 109, 250 - (i * 100));
+      ellipse(xwing.x, xwing.y + xheight, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+    
+    fill(239, 35, 109);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(239, 35, 109, 250 - (i * 100));
+      ellipse(xwing.x + xwidth, xwing.y + xheight, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+  }//End xwtarget()
 }//End class
