@@ -7,6 +7,8 @@ DeathStar ds;
 Xwing xw, xw2;
 
 float var;
+float numxw;
+
 void setup()
 {
   size(900, 800);
@@ -52,7 +54,7 @@ void draw()
   target.displaySys(485, 630, 8);
   
   //Only display the aiming reticle if the mouse is not hovering over the radar
-  if (dist(rx, ry, mouseX, mouseY) >= rd/2 && mousePressed == true)
+  if (dist(rx, ry, mouseX, mouseY) >= rd/2)
   {
      //Call the radar display function again to increase the speed of the radar while aiming
      r1.display(255);
@@ -60,7 +62,7 @@ void draw()
      
      if (dist(mouseX, mouseY, 300, 365) < xwidth || dist(mouseX, mouseY, 500, 360) < xwidth)
      {
-       xwtarget.target(544, 665);
+       xwtarget.target(543, 665);
      }
   }//End if
 }//End draw()

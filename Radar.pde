@@ -53,5 +53,10 @@ class Radar
       {
         angle = angle + 0.02;
       }//End else
+      
+      x = map(x, 0, width, rx - rd/2, rx + rd/2);
+      y = map(y, 0, height, ry - rd/2, ry + rd/2);
+      ellipse(x, y, 8, 8);
+      
   }//End display()
 }//End Radar class
