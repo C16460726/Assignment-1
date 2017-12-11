@@ -55,24 +55,15 @@ class Radar
         angle = angle + 0.02;
       }//End else
       
-      x = map(300, 0, width, rx - rd/2, rx + rd/2);
+        x = map(300, 0, width, rx - rd/2, rx + rd/2);
         y = map(365, 0, height, ry - rd/2, ry + rd/2);
-        PVector p1 = new PVector(mouseX - 250, mouseY - 250);
         
         x2 = map(500, 0, width, rx - rd/2, rx + rd/2);
         y2 = map(360, 0, height, ry - rd/2, ry + rd/2);
-        PVector p2 = new PVector(250*cos((PI/2)+angle), 250*sin((PI/2)+angle));
         
-      if (degrees(PVector.angleBetween(p1, p2))<2 && degrees(PVector.angleBetween(p1, p2))>-2) 
-      {
-        strokeWeight(5);
-        stroke(255, 0, 0);
-        fill(0, 255, 0);
-        ellipse(mouseX, mouseY, 8, 8);
-        
-        fill(0, 250, 0);
-        ellipse(x, y, 8, 8);
-        //ellipse(x2, y2, 8, 8);
-      }
+        noStroke();
+        fill(0, 250, 0, 150);
+        ellipse(x, y, 5, 5);
+        ellipse(x2, y2, 5, 5);
   }//End display()
 }//End Radar class
