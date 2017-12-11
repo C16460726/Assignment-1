@@ -10,6 +10,7 @@ boolean shot1, shot2;
 
 void setup()
 {
+  noCursor();
   smooth();
   size(900, 800);
   

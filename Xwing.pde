@@ -100,6 +100,7 @@ class Xwing
       ellipse(xwing.x + xwidth, xwing.y + xheight, 5 + (i * 5), 5 + (i * 5));
     }//End for
     
+    //Add motion to the xwings
     xwing1x += random(-0.7, .7);
     xwing1y += random(-0.7, .7);
     xwing2x += random(-0.7, .7);
@@ -109,18 +110,27 @@ class Xwing
     {
       xwing1x -= 2.5;
       xwing1y += 3;
-      fill(249, 116, 15);
-      ellipse(xwing1x + xwidth/2, xwing1y + xheight/2, explosionsize1, explosionsize1);
-      explosionsize1++;
+      //fill(explosionsize1 * 2);
+      fill(249 + explosionsize1, 116, 15, 100);
+      strokeWeight(5);
+      ellipse(xwing1x + xwidth/2, xwing1y + xheight/2, explosionsize1, explosionsize1 * 1.2);
+      if (explosionsize1 <= 45)
+      {
+          explosionsize1++;
+      }//End if
     }//End if
     
     if (shot2)
     {
       xwing2x += 2.5;
       xwing2y += 3;
-      fill(249, 116, 15);
-      ellipse(xwing2x + xwidth/2, xwing2y + xheight/2, explosionsize2, explosionsize2);
-      explosionsize2++;
+      fill(249 + explosionsize2, 116, 15, 100);
+      strokeWeight(5);
+      ellipse(xwing2x + xwidth/2, xwing2y + xheight/2, explosionsize2, explosionsize2 * 1.2);
+      if (explosionsize2 <= 45)
+      {
+          explosionsize2++;
+      }//End if
     }//End if
     
     if (xwing1y >= height + 150)

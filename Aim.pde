@@ -272,18 +272,11 @@ class Aim
     if(dist(mouseX, mouseY, xwing1x, xwing1y) < xwidth)
     {
       shot1 = true;
-      explosion();
     }//End if
     
     if(dist(mouseX, mouseY, xwing2x, xwing2y) < xwidth)
     {
       shot2 = true;
-      explosion();
     }//End if
   }//End shoot()
-  
-  void explosion()
-  {
-    
-  }//End explosion
 }//End class
