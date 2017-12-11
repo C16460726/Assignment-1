@@ -8,22 +8,41 @@ class Xwing
     xheight = 15;
   }//End constructor
   
-  void displayxw(float x1, float y1, float x2, float y2)
+  void displayxw(float x1, float y1 )//float x2, float y2)
   {
     PVector xwing1 = new PVector(x1, y1);
-    PVector xwing2 = new PVector(x2, y2);
+   // PVector xwing2 = new PVector(x2, y2);
     noStroke();
     fill(165);
     rect(xwing1.x, xwing1.y, xwidth, xheight, 4);
-    rect(xwing2.x, xwing2.y, xwidth, xheight, 4);
+    //rect(xwing2.x, xwing2.y, xwidth, xheight, 4);
     
     //Display the wings
     stroke(200);
     strokeWeight(5);
-    line(xwing1.x, xwing1.y + xheight/2, xwing1.x - 30, xwing1.y - 5);
-    line(xwing1.x, xwing1.y + xheight/2, xwing1.x - 30, xwing1.y + xheight + 5);
-    line(xwing1.x + xwidth, xwing1.y + xheight/2, xwing1.x + xwidth + 30, xwing1.y - 5);
-    line(xwing1.x + xwidth, xwing1.y + xheight/2, xwing1.x + xwidth + 30, xwing1.y + xheight + 5);
+    float w = 0;
+    float h;
+    float c = - 30;
+    for(i = 1; i <= 4; i++)
+    {
+      if (i > 2)
+      {
+        w = xwidth;
+        c = xwidth + 30;
+      }//End if
+      
+      if (i % 2 == 0)
+      {
+        h = xheight + 5;
+      }//End if
+      
+      else
+      {
+        h = - 5;
+      }//End else
+      
+      line(xwing1.x + w, xwing1.y + xheight/2, xwing1.x + c, xwing1.y + h);
+    }//End for
     
     //Add lights
     strokeWeight(3);
@@ -86,6 +105,5 @@ class Xwing
       ellipse(xwing1.x, xwing1.y + 2, 15, 15);
       stroke(255, 90, 90, 0);
     */
-    //ellipse(xwing1.x, xwing1.y, 20, 20);
   }//End displayxw()
 }//End class Xwing

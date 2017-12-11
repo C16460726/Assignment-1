@@ -39,7 +39,8 @@ void draw()
   //Display the radar
   r1.display(255); 
   
-  xw.displayxw(300, 365, 500, 360);
+  xw.displayxw(300, 365);//, 500, 360);
+  xw.displayxw(500, 360);
   
   //display the window frame of the TIE fighter in the center of the screen 
   b.displayB(width/2, height/2, 225);
