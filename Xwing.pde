@@ -10,12 +10,12 @@ class Xwing
   
   void displayxw(float x1, float y1 )//float x2, float y2)
   {
-    PVector xwing1 = new PVector(x1, y1);
+    PVector xwing = new PVector(x1, y1);
    // PVector xwing2 = new PVector(x2, y2);
     noStroke();
     fill(165);
-    rect(xwing1.x, xwing1.y, xwidth, xheight, 4);
-    //rect(xwing2.x, xwing2.y, xwidth, xheight, 4);
+    rect(xwing.x, xwing.y, xwidth, xheight, 4);
+    
     
     //Display the wings
     stroke(200);
@@ -41,69 +41,91 @@ class Xwing
         h = - 5;
       }//End else
       
-      line(xwing1.x + w, xwing1.y + xheight/2, xwing1.x + c, xwing1.y + h);
+      line(xwing.x + w, xwing.y + xheight/2, xwing.x + c, xwing.y + h);
     }//End for
     
     //Add lights
     strokeWeight(3);
     fill(255, 90, 90);
-    for (i = 0; i <= 2; i++)
+    float j;
+   
+    for (i = 0; i < 3; i++)
     {
-      if (i == 1)
+      w = 0;
+      h = 0;
+      for (j = 0; j < 3; j++)
+      {
+         
+      if (j == 1)
       {
         noFill();
       }//End if
       
-      stroke(255, 90, 90, 250 - (i * 100));
-      ellipse(xwing1.x, xwing1.y + 2, 5 + (i * 5), 5 + (i * 5));
-    }//End for
-    
-    fill(255, 90, 90);
-    for (i = 0; i <= 2; i++)
-    {
-      if (i == 1)
+      if (j > 1)
       {
-        noFill();
+        h = xheight;
       }//End if
       
-      stroke(255, 90, 90, 250 - (i * 100));
-      ellipse(xwing1.x + xwidth, xwing1.y + 2, 5 + (i * 5), 5 + (i * 5));
-    }//End for
-    
-    fill(255, 90, 90);
-    for (i = 0; i <= 2; i++)
-    {
-      if (i == 1)
+      if (j % 2 != 0)
       {
-        noFill();
+        w = xwidth;
       }//End if
       
-      stroke(255, 90, 90, 250 - (i * 100));
-      ellipse(xwing1.x, xwing1.y + xheight, 5 + (i * 5), 5 + (i * 5));
-    }//End for
-    
-    fill(255, 90, 90);
-    for (i = 0; i <= 2; i++)
-    {
-      if (i == 1)
+      else
       {
-        noFill();
-      }//End if
+        w = 0;
+      }//End else
       
-      stroke(255, 90, 90, 250 - (i * 100));
-      ellipse(xwing1.x + xwidth, xwing1.y + xheight, 5 + (i * 5), 5 + (i * 5));
-    }//End for
-    /*
+      stroke(255, 90, 90, 250 - (j * 100));
+      ellipse(xwing.x + w, xwing.y + h, 5 + (j * 5), 5 + (j * 5));
+      }//End inner for
       fill(255, 90, 90);
-      strokeWeight(3);
-      stroke(255, 90, 90, 250);
-      ellipse(xwing1.x, xwing1.y + 2, 5, 5);
-      noFill();
-      stroke(255, 90, 90, 150);
-      ellipse(xwing1.x, xwing1.y + 2, 10, 10);
-      stroke(255, 90, 90, 50);
-      ellipse(xwing1.x, xwing1.y + 2, 15, 15);
-      stroke(255, 90, 90, 0);
-    */
+    }//End outer for
+    /*for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(255, 90, 90, 250 - (i * 100));
+      ellipse(xwing.x, xwing.y + 2, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+    
+    fill(255, 90, 90);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(255, 90, 90, 250 - (i * 100));
+      ellipse(xwing.x + xwidth, xwing.y + 2, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+    
+    fill(255, 90, 90);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(255, 90, 90, 250 - (i * 100));
+      ellipse(xwing.x, xwing.y + xheight, 5 + (i * 5), 5 + (i * 5));
+    }//End for
+    
+    fill(255, 90, 90);
+    for (i = 0; i <= 2; i++)
+    {
+      if (i == 1)
+      {
+        noFill();
+      }//End if
+      
+      stroke(255, 90, 90, 250 - (i * 100));
+      ellipse(xwing.x + xwidth, xwing.y + xheight, 5 + (i * 5), 5 + (i * 5));
+    }//End for*/
   }//End displayxw()
 }//End class Xwing
