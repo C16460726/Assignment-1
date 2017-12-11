@@ -273,13 +273,14 @@ void shoot()
   line(mouseX, mouseY, 100, height);
   line(mouseX, mouseY, width - 100, height);
   
-  if(dist(mouseX, mouseY, xwing1x, xwing1y) < xwidth)// || dist(mouseX, mouseY, xwing2x, xwing2y) < xwidth)
+  
+  if(dist(mouseX, mouseY, xwing1x, xwing1y) < xwidth)
   {
-    shot.fall(xwing1x, xwing1y);
+    shot1 = true;
   }//End if
   
   if(dist(mouseX, mouseY, xwing2x, xwing2y) < xwidth)
   {
-    shot.fall(xwing2x, xwing2y);
+    shot2 = true;
   }//End if
 }//End shoot()

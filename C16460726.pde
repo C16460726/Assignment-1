@@ -4,11 +4,11 @@ Aim a, target, xwtarget;
 Border b;
 Symbol s;
 DeathStar ds;
-Xwing xw, xw2, shot;
+Xwing xw, xw2;
 
 float xwing1x, xwing1y, xwing2x, xwing2y;
 float var;
-float numxw;
+boolean shot1, shot2;
 
 void setup()
 {
@@ -22,7 +22,6 @@ void setup()
   
   xw = new Xwing();
   xw2 = new Xwing();
-  shot = new Xwing();
   ds = new DeathStar();
   b = new Border();
   s = new Symbol();
@@ -35,6 +34,8 @@ void setup()
   xwing1y = 365;
   xwing2x = 500;
   xwing2y = 360;
+  
+  shot1 = shot2 = false;
 }//End setup()
 
 void draw()
@@ -69,7 +70,7 @@ void draw()
      r1.display(255);
      a.UseAim(50 * abs(cos(var)) + 17, 50 * abs(sin(var)) + 55, 20);
      
-     if (dist(mouseX, mouseY, 315, 365) < xwidth/2 || dist(mouseX, mouseY, 515, 360) < xwidth/2)
+     if (dist(mouseX, mouseY, xwing1x + xwidth/2, xwing1y) < xwidth/2 || dist(mouseX, mouseY, xwing2x + xwidth/2, xwing2y) < xwidth/2)
      {
        xwtarget.target(543, 665);
      }

@@ -97,11 +97,23 @@ class Xwing
       stroke(255, 90, 90, 250 - (i * 100));
       ellipse(xwing.x + xwidth, xwing.y + xheight, 5 + (i * 5), 5 + (i * 5));
     }//End for
+    
+    xwing1x += random(-0.7, .7);
+    xwing1y += random(-0.7, .7);
+    xwing2x += random(-0.7, .7);
+    xwing2y += random(-0.7, .7);
+    
+    if (shot1)
+    {
+      xwing1x -= 2.5;
+      xwing1y += 3;
+    }//End if
+    
+    if (shot2)
+    {
+      xwing2x += 2.5;
+      xwing2y += 3;
+    }//End if
+    
   }//End displayxw()
-  
-  void fall(float x3, float y3)
-  {
-    //x3 = x3 - 5;
-    //y3 = y3 - 25;
-  }//End fall()
 }//End class Xwing
