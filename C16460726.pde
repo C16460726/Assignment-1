@@ -2,8 +2,6 @@ Star[] space;
 Radar r1;
 Aim a, target, xwtarget;
 Border b;
-Symbol s;
-DeathStar ds;
 Xwing xw, xw2;
 
 float xwing1x, xwing1y, xwing2x, xwing2y;
@@ -23,9 +21,7 @@ void setup()
   
   xw = new Xwing();
   xw2 = new Xwing();
-  ds = new DeathStar();
   b = new Border();
-  s = new Symbol();
   r1 = new Radar();
   a = new Aim();
   target = new Aim();
@@ -58,8 +54,6 @@ void draw()
   
   //display the window frame of the TIE fighter in the center of the screen 
   b.displayB(width/2, height/2, 225);
-  
-  //s.displayS();
   
   //Display the targeting system
   target.displaySys(485, 630, 8);

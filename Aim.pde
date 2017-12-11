@@ -8,7 +8,6 @@ class Aim
   {
     syswidth = 145;
     sysheight = 85;
-    explode_spd = 5;
   }
   
   void UseAim(float R, float r, float n)
