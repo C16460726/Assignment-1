@@ -98,4 +98,10 @@ class Xwing
       ellipse(xwing.x + xwidth, xwing.y + xheight, 5 + (i * 5), 5 + (i * 5));
     }//End for
   }//End displayxw()
+  
+  void fall(float x3, float y3)
+  {
+    //x3 = x3 - 5;
+    //y3 = y3 - 25;
+  }//End fall()
 }//End class Xwing

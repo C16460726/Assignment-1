@@ -15,12 +15,14 @@ class Aim
     noFill();
     //To use the aiming reticle
     PVector mouse = new PVector(mouseX, mouseY);
+    if (mousePressed == true)
+    {
+        shoot();
+    }//End if
     strokeWeight(2);
     stroke(255);
-    
     pushMatrix();
     translate(mouse.x, mouse.y);
-    
     //Loop through n (20) number of times to create and move each arc
     for (i = 0; i <= n; i = i + 1) 
     {
@@ -262,3 +264,22 @@ class Aim
     }//End for
   }//End xwtarget()
 }//End class
+
+void shoot()
+{
+  //Draw two beams
+  strokeWeight(7);
+  stroke(100, 255, 50);
+  line(mouseX, mouseY, 100, height);
+  line(mouseX, mouseY, width - 100, height);
+  
+  if(dist(mouseX, mouseY, xwing1x, xwing1y) < xwidth)// || dist(mouseX, mouseY, xwing2x, xwing2y) < xwidth)
+  {
+    shot.fall(xwing1x, xwing1y);
+  }//End if
+  
+  if(dist(mouseX, mouseY, xwing2x, xwing2y) < xwidth)
+  {
+    shot.fall(xwing2x, xwing2y);
+  }//End if
+}//End shoot()
